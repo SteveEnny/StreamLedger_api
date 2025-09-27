@@ -13,7 +13,7 @@ test('a user can sign up successfully with valid data', function () {
         // 'password_confirmation' => 'password',
     ];
 
-    $this->postJson('/api_v1/register', $userData)
+    $this->postJson('/api/v1/register', $userData)
         ->assertStatus(201);
 
     $this->assertDatabaseHas('users', [
@@ -32,7 +32,7 @@ test('an existing user can sign in successfully', function () {
         'password' => 'password',
     ];
 
-    $this->postJson('/api_v1/login', $credentials)
+    $this->postJson('/api/v1/login', $credentials)
         ->assertStatus(200)
         ->assertJsonStructure([
                  'data' => [
@@ -56,7 +56,7 @@ test('user cannot sign up with an existing email address', function () {
         // 'password_confirmation' => 'password',
     ];
 
-    $this->postJson('/api_v1/register', $userData)
+    $this->postJson('/api/v1/register', $userData)
         ->assertStatus(422)
         ->assertJsonValidationErrors('email');
 });

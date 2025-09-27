@@ -24,7 +24,7 @@ test('an authenticated user can successfully create a credit transaction', funct
     ];
 
     $response = $this->actingAs($this->user, 'sanctum')
-                     ->postJson('/api_v1/transaction', $payload);
+                     ->postJson('/api/v1/transaction', $payload);
 
     $response->assertStatus(201);
 
@@ -49,7 +49,7 @@ test('an authenticated user can successfully create a debit transaction', functi
     ];
 
     $response = $this->actingAs($this->user, 'sanctum')
-                     ->postJson('/api_v1/transaction', $payload);
+                     ->postJson('/api/v1/transaction', $payload);
 
     $response->assertStatus(201);
 
@@ -69,7 +69,7 @@ test('transaction creation fails due to insufficient funds for a debit entry', f
     ];
 
     $response = $this->actingAs($this->user, 'sanctum')
-                    ->postJson('/api_v1/transaction', $payload);;
+                    ->postJson('/api/v1/transaction', $payload);;
 
     $response->assertStatus(422)
             ->assertJson([
@@ -88,7 +88,7 @@ test('retrieves all transactions with pagination', function () {
     ]);
 
     $response = $this->actingAs($this->user, 'sanctum')
-                 ->getJson('/api_v1/transaction');
+                 ->getJson('/api/v1/transaction');
 
     $response->assertStatus(200)
         ->assertJsonStructure([
@@ -107,17 +107,17 @@ test('an unauthenticated users cannot create a transaction', function () {
         'amount' => 100,
     ];
 
-    postJson('/api_v1/transaction', $payload)
+    postJson('/api/v1/transaction', $payload)
         ->assertUnauthorized();
 });
 
 test('an unauthenticated users cannot retrieve transactions', function () {
-    getJson('/api_v1/transaction')
+    getJson('/api/v1/transaction')
         ->assertUnauthorized();
 });
 
 
 test('an unauthenticated users cannot export transactions', function () {
-    getJson('/api_v1/transaction/export')
+    getJson('/api/v1/transaction/export')
         ->assertUnauthorized();
 });
