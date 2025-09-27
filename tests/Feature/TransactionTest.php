@@ -93,9 +93,7 @@ test('retrieves all transactions with pagination', function () {
     $response->assertStatus(200)
         ->assertJsonStructure([
                 'data' => [
-                    'data' => [
-                        '*' => ['id', 'entry', 'amount', 'balance', 'created_at', 'updated_at']
-                    ]
+                    '*' => ['id', 'entry', 'amount', 'balance', 'created_at', 'updated_at']
                 ]
             ]);
 });
