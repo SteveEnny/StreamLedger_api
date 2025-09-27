@@ -65,6 +65,7 @@ docker-compose exec app php artisan db:seed
 | `app`       | 8000 | Laravel application (PHP-FPM + Nginx) |
 | `postgres`  | 5432 | PostgreSQL database                   |
 | `kafka`     | 9092 | Apache Kafka message broker           |
+| `kafka ui`  | 8080 | Apache Kafka UI                       |
 | `zookeeper` | 2181 | Kafka dependency                      |
 
 ### Docker Commands
