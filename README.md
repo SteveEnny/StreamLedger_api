@@ -56,6 +56,10 @@ docker-compose exec app php artisan migrate
 docker-compose exec app php artisan db:seed
 ```
 
+## Kafka topic (located in the UI)
+
+    Kafka UI - http://localhost:8080/
+
 ## 🐳 Docker Services
 
 ### Container Architecture
