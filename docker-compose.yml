@@ -11,6 +11,7 @@ services:
             - kafka
         volumes:
             - .:/var/www/html:delegated
+            - /var/www/html/vendor
 
         # networks:
         #   - app-network
@@ -83,6 +84,7 @@ services:
         volumes:
             - .:/var/www/html
             - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+            - /var/www/html/vendor
         depends_on:
             - app
             - postgres
@@ -93,6 +95,7 @@ services:
             dockerfile: Dockerfile
         volumes:
             - .:/var/www/html
+            - /var/www/html/vendor
         entrypoint: ["php", "/var/www/html/artisan"]
 volumes:
     pgdata:
