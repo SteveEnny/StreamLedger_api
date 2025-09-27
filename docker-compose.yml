@@ -79,12 +79,9 @@ services:
         container_name: laravel_nginx
         restart: unless-stopped
         ports:
-            # Map container port 80 to host port 8000 (access via http://localhost:8000)
             - "8000:80"
         volumes:
-            # Mount application code (read-only for Nginx)
             - .:/var/www/html
-            # Mount the custom Nginx config file
             - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
         depends_on:
             - app
