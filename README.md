@@ -45,6 +45,10 @@ The `.env` file is already configured with the following settings:
 ```bash
 # Build and start all services
 docker-compose up -d --build
+#or
+docker-compose up -d --build #(not in detach mode)
+
+
 
 # Generate application key optional since env file is pushed
 docker-compose exec app php artisan key:generate
