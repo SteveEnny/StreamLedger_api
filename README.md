@@ -13,6 +13,10 @@
 
 ## 🚀 Quick Start
 
+### Documentation link
+
+-   https://documenter.getpostman.com/view/14679973/2sB3QDvshy#0d1b72b7-64bf-4f13-ac36-8fe00b069dad
+
 ### Prerequisites
 
 -   Docker and Docker Compose installed
@@ -21,7 +25,7 @@
 ### 1. Clone the Repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/SteveEnny/StreamLedger_api.git
 cd StreamLedger_api
 ```
 
@@ -109,7 +113,7 @@ docker-compose exec app php artisan config:clear
 ### Queue Management
 
 ```bash
-# Start queue worker (runs automatically via Supervisor in Docker)
+# Start queue worker
 docker-compose exec app php artisan queue:work
 
 # List queued jobs
@@ -179,6 +183,8 @@ php artisan queue:work
 │   ├── Http/Controllers/     # API controllers
 │   ├── Models/              # Eloquent models
 │   ├── Jobs/                # Queue jobs
+│   ├── Observers/                # Observers
+│   │   └── TransactionObserver
 │   └── Services/            # Service classes
 ├── database/
 │   ├── migrations/          # Database migrations
