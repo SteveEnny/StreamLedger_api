@@ -2,6 +2,7 @@
 
 namespace App\Observers;
 
+use App\Jobs\SendKafkaMessageJob;
 use App\Models\Transaction;
 use App\Services\KafkaProducerService;
 use Illuminate\Support\Facades\Log;
@@ -19,35 +20,7 @@ class TransactionObserver
      */
     public function created(Transaction $transaction): void
     {
-        try {
-            $messagePayload = [
-                'user_id' => $transaction->user_id,
-                'entry' => $transaction->entry,
-                'amount' => $transaction->amount,
-                'balance' => $transaction->balance,
-                'timestamp' => $transaction->created_at->toISOString(),
-            ];
-
-            $success = $this->kafkaProducer->sendJson('transactions', $messagePayload);
-
-            if ($success) {
-                Log::info("Transaction streamed to Kafka successfully", [
-                    'transaction_id' => $transaction->id,
-                    'user_id' => $transaction->user_id
-                ]);
-            } else {
-                Log::error("Failed to stream transaction to Kafka", [
-                    'transaction_id' => $transaction->id,
-                    'user_id' => $transaction->user_id
-                ]);
-            }
-        } catch (\Exception $e) {
-            Log::error("Exception while streaming transaction to Kafka: " . $e->getMessage(), [
-                'transaction_id' => $transaction->id,
-                'user_id' => $transaction->user_id,
-                'exception' => $e
-            ]);
-        }
+        SendKafkaMessageJob::dispatch($this->kafkaProducer, $transaction);
     }
 
     /**
