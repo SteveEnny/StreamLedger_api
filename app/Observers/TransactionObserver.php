@@ -19,7 +19,7 @@ class TransactionObserver
      */
     public function created(Transaction $transaction): void
     {
-        SendKafkaMessageJob::dispatch($this->kafkaProducer, $transaction);
+        SendKafkaMessageJob::dispatch( $transaction);
     }
 
     /**
