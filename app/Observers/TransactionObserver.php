@@ -9,11 +9,9 @@ use Illuminate\Support\Facades\Log;
 
 class TransactionObserver
 {
-    private $kafkaProducer;
 
-    public function __construct(KafkaProducerService $kafkaProducer)
+    public function __construct())
     {
-        $this->kafkaProducer = $kafkaProducer;
     }
     /**
      * Handle the Transaction "created" event.
