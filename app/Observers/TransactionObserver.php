@@ -10,7 +10,8 @@ use Illuminate\Support\Facades\Log;
 class TransactionObserver
 {
 
-    public function __construct())
+
+    public function __construct()
     {
     }
     /**
