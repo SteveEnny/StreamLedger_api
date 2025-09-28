@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'test@example.com',
         ]);
 
-        $user->wallet::factory()->update([
+        $user->wallet->update([
             'user_id' => $user->id,
             'balance' => fake()->randomFloat(2, 100, 1000),
         ]);
