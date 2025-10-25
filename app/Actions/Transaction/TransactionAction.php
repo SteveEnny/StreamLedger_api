@@ -37,7 +37,7 @@ class TransactionAction {
                 'balance' => $newBalance
             ]);
 
-            return $this->success('Account credited successfully', $transaction, 201);
+            return $this->success('Account debited successfully', $transaction, 201);
         });
 
     }
