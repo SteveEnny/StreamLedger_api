@@ -1,42 +1,20 @@
-FROM php:8.3-fpm-alpine
+FROM richarvey/nginx-php-fpm:3.1.6
 
-WORKDIR /var/www/html
+COPY . .
 
+# Image config
+ENV SKIP_COMPOSER 1
+ENV WEBROOT /var/www/html/public
+ENV PHP_ERRORS_STDERR 1
+ENV RUN_SCRIPTS 1
+ENV REAL_IP_HEADER 1
 
-RUN apk update && apk add --no-cache \
-    git \
-    unzip \
-    libzip-dev \
-    libjpeg-turbo-dev \
-    libpng-dev \
-    libwebp-dev \
-    freetype-dev \
-    libpq-dev \
-    librdkafka-dev \
-    $PHPIZE_DEPS \
-    && rm -rf /var/cache/apk/*
+# Laravel config
+ENV APP_ENV production
+ENV APP_DEBUG false
+ENV LOG_CHANNEL stderr
 
+# Allow composer to run as root
+ENV COMPOSER_ALLOW_SUPERUSER 1
 
-RUN docker-php-ext-configure gd --with-freetype --with-jpeg --with-webp \
-    && docker-php-ext-install pdo_mysql pdo_pgsql zip gd
-
-
-RUN pecl channel-update pecl.php.net \
-    && pecl install rdkafka \
-    && docker-php-ext-enable rdkafka
-
-COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
-
-
-COPY . /var/www/html
-
-
-# RUN composer install --no-dev --optimize-autoloader # Production Mode
-RUN composer install --optimize-autoloader
-
-RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache \
-    && chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
-
-EXPOSE 9000
-
-CMD ["php-fpm"]
+CMD ["/start.sh"]
