@@ -1,0 +1,948 @@
+{
+	"info": {
+		"_postman_id": "14679973-b0798ccd-55b0-45dc-ab1d-d6927cd44da5",
+		"name": "StreamLegal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Login",
+					"id": "14679973-c4df23cc-0f22-4f00-bd02-5d55bc458703",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"test@example.com\",\r\n    \"password\": \"password\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base_Url}}login",
+							"host": [
+								"{{Base_Url}}login"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "14679973-fd287dec-72e5-4bba-971c-488c4ef247a7",
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"test@example.com\",\r\n    \"password\": \"password\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/v1/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.28.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.26"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 27 Sep 2025 12:54:10 GMT"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Authenticated\",\n    \"data\": {\n        \"token\": \"2|g7aieW6ExyuH2YAxskoTeCkSihpSZRhE97YVk4jIae386c9e\"\n    }\n}"
+						},
+						{
+							"id": "14679973-c98c5c6a-6870-4994-9c7f-ef80b8a81cbb",
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"JohnDoe@example.com\",\r\n    \"password\": \"password\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://streamledger-api.onrender.com/api/v1/login",
+									"protocol": "https",
+									"host": [
+										"streamledger-api",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 26 Oct 2025 02:12:47 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "99466e34b9dbbd9d-LHR"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "rndr-id",
+									"value": "fe03f147-d5bd-4131"
+								},
+								{
+									"key": "vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "PHP/8.2.7"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "nginx"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "cf-cache-status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Authenticated\",\n    \"data\": {\n        \"token\": \"1|lvWRJIpMWlNp9WioyUdnlF451EcHW5IXMyNT5MGB02678f67\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Register",
+					"id": "14679973-1448807e-75fc-455b-a8dc-dceb0cfbe583",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"JohnDoe@example.com\",\r\n    \"password\": \"password\",\r\n    \"name\" : \"John Doe\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base_Url}}register",
+							"host": [
+								"{{Base_Url}}register"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "14679973-1dd39d4d-b7b4-4dff-b99d-dde736cd01ab",
+							"name": "Register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"JohnDoe@example.com\",\r\n    \"password\": \"password\",\r\n    \"name\" : \"John Doe\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Base_Url}}register",
+									"host": [
+										"{{Base_Url}}register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.28.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.26"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 27 Sep 2025 12:53:41 GMT"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"User created successfully\",\n    \"data\": {\n        \"name\": \"John Doe\",\n        \"email\": \"JohnDoe@example.com\",\n        \"updated_at\": \"2025-09-27T12:53:41.000000Z\",\n        \"created_at\": \"2025-09-27T12:53:41.000000Z\",\n        \"id\": 2\n    }\n}"
+						},
+						{
+							"id": "14679973-d1e6ff85-5906-4dd8-8e38-4e56e2a0f10e",
+							"name": "Register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"JohnDoe@example.com\",\r\n    \"password\": \"password\",\r\n    \"name\" : \"John Doe\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://streamledger-api.onrender.com/api/v1/register",
+									"protocol": "https",
+									"host": [
+										"streamledger-api",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 26 Oct 2025 02:12:02 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "99466d1a4a34bd9d-LHR"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "rndr-id",
+									"value": "12035c47-527d-4685"
+								},
+								{
+									"key": "vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "PHP/8.2.7"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "nginx"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "cf-cache-status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"User created successfully\",\n    \"data\": {\n        \"name\": \"John Doe\",\n        \"email\": \"JohnDoe@example.com\",\n        \"updated_at\": \"2025-10-26T02:12:02.000000Z\",\n        \"created_at\": \"2025-10-26T02:12:02.000000Z\",\n        \"id\": 1\n    }\n}"
+						}
+					]
+				}
+			],
+			"id": "14679973-80d4dbc8-23ba-48f3-93ac-c86ddf56468e"
+		},
+		{
+			"name": "Wallet Details",
+			"item": [
+				{
+					"name": "wallet",
+					"id": "14679973-803c6f55-bceb-48d8-a49c-86625695e30a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "\"2|VbehbHqmgM1E1vRImmr6xxDZdLbgO50ADhLfVQE325cd090d\"",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{Base_Url}}wallet",
+							"host": [
+								"{{Base_Url}}wallet"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "14679973-4331d1ed-6d82-4794-ac5c-df9748fce5f1",
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{Base_Url}}wallet",
+									"host": [
+										"{{Base_Url}}wallet"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.28.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.26"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 27 Sep 2025 12:52:58 GMT"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Test User\",\n        \"email\": \"test@example.com\",\n        \"email_verified_at\": \"2025-09-27T12:04:30.000000Z\",\n        \"created_at\": \"2025-09-27T12:04:31.000000Z\",\n        \"updated_at\": \"2025-09-27T12:04:31.000000Z\",\n        \"wallet\": {\n            \"id\": 2,\n            \"user_id\": 1,\n            \"balance\": \"844.7100\",\n            \"created_at\": \"2025-09-27T12:04:32.000000Z\",\n            \"updated_at\": \"2025-09-27T12:04:32.000000Z\"\n        }\n    }\n}"
+						}
+					]
+				}
+			],
+			"id": "14679973-7d025978-ee08-4e92-91e7-90cfc34c5f20"
+		},
+		{
+			"name": "Transactions",
+			"item": [
+				{
+					"name": "Transactions",
+					"id": "14679973-0d1b72b7-64bf-4f13-ac36-8fe00b069dad",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\" : \"100\",\r\n    // \"entry\" : \"debit\"\r\n    \"entry\" : \"credit\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base_Url}}transaction",
+							"host": [
+								"{{Base_Url}}transaction"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "14679973-28594645-d339-467b-8de9-7bccbfa2f313",
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"amount\" : \"100\",\r\n    \"entry\" : \"credit\"\r\n    // \"entry\" : \"debit\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Base_Url}}transaction",
+									"host": [
+										"{{Base_Url}}transaction"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.28.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.26"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 27 Sep 2025 12:49:58 GMT"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Account credited successfully\",\n    \"data\": {\n        \"entry\": \"credit\",\n        \"amount\": \"100.00\",\n        \"balance\": \"100.00\",\n        \"updated_at\": \"2025-09-27T12:49:56.000000Z\",\n        \"created_at\": \"2025-09-27T12:49:56.000000Z\",\n        \"id\": 6\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Transactions",
+					"id": "14679973-2b2373ad-421c-4c4a-9991-db409239d8d1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\" : \"100\",\r\n    \"entry\" : \"credit\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base_Url}}transaction",
+							"host": [
+								"{{Base_Url}}transaction"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "14679973-21311d7d-51c8-483f-b6a7-d8001711eea1",
+							"name": "Transactions",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"amount\" : \"100\",\r\n    \"entry\" : \"credit\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Base_Url}}transaction",
+									"host": [
+										"{{Base_Url}}transaction"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.28.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.26"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 27 Sep 2025 12:47:46 GMT"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"entry\": \"credit\",\n            \"amount\": \"100.00\",\n            \"balance\": \"100.00\",\n            \"created_at\": \"2025-09-27T12:04:32.000000Z\",\n            \"updated_at\": \"2025-09-27T12:04:32.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"entry\": \"credit\",\n            \"amount\": \"100.00\",\n            \"balance\": \"200.00\",\n            \"created_at\": \"2025-09-27T12:04:33.000000Z\",\n            \"updated_at\": \"2025-09-27T12:04:33.000000Z\"\n        },\n        {\n            \"id\": 3,\n            \"entry\": \"credit\",\n            \"amount\": \"100.00\",\n            \"balance\": \"300.00\",\n            \"created_at\": \"2025-09-27T12:04:33.000000Z\",\n            \"updated_at\": \"2025-09-27T12:04:33.000000Z\"\n        },\n        {\n            \"id\": 4,\n            \"entry\": \"debit\",\n            \"amount\": \"100.00\",\n            \"balance\": \"200.00\",\n            \"created_at\": \"2025-09-27T12:04:33.000000Z\",\n            \"updated_at\": \"2025-09-27T12:04:33.000000Z\"\n        },\n        {\n            \"id\": 5,\n            \"entry\": \"debit\",\n            \"amount\": \"100.00\",\n            \"balance\": \"100.00\",\n            \"created_at\": \"2025-09-27T12:04:33.000000Z\",\n            \"updated_at\": \"2025-09-27T12:04:33.000000Z\"\n        }\n    ],\n    \"links\": {\n        \"first\": \"http://localhost:8000/api/v1/transaction?page=1\",\n        \"last\": \"http://localhost:8000/api/v1/transaction?page=1\",\n        \"prev\": null,\n        \"next\": null\n    },\n    \"meta\": {\n        \"current_page\": 1,\n        \"from\": 1,\n        \"last_page\": 1,\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"page\": null,\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/v1/transaction?page=1\",\n                \"label\": \"1\",\n                \"page\": 1,\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"page\": null,\n                \"active\": false\n            }\n        ],\n        \"path\": \"http://localhost:8000/api/v1/transaction\",\n        \"per_page\": 20,\n        \"to\": 5,\n        \"total\": 5\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Export Transactions",
+					"id": "14679973-ba3fbbeb-782f-4b88-aa4f-887737e5a8a1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{Base_Url}}transaction/export",
+							"host": [
+								"{{Base_Url}}transaction"
+							],
+							"path": [
+								"export"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "14679973-7b167b1e-2bfc-4ad3-a339-a1f7a63204bf",
+							"name": "Export Transactions",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{Base_Url}}transaction/export",
+									"host": [
+										"{{Base_Url}}transaction"
+									],
+									"path": [
+										"export"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.28.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.26"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 27 Sep 2025 12:51:52 GMT"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Transaction export is being processed. You will be notified upon completion.\"\n}"
+						}
+					]
+				}
+			],
+			"id": "14679973-ff3e0483-25da-4df3-84fa-74b28507fe9f"
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "ae07bd2d-d494-4bb1-8924-fb920b5aa613",
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "210a5e0b-5439-444d-8360-d31d2a2429d4",
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": "1|vPiNZarrjvANUS4m2frvVuUqL4gLNsK4TrMHI0Rka44d9976"
+		},
+		{
+			"key": "Base_Url",
+			"value": "http://localhost:8000/api/v1/"
+		}
+	]
+}
