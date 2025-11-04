@@ -4677,6 +4677,573 @@
 					}
 				}
 			]
+		},
+		{
+			"name": "Tiers",
+			"item": [
+				{
+					"name": "Tier one",
+					"id": "14679973-fe9416cc-836f-42d3-a37c-412ab8565308",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"type\": \"NIN\",\r\n  \"number\": \"123452749\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8085/api/tiers/tier_one",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"tiers",
+								"tier_one"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "14679973-835d77c8-ae0b-45db-baeb-87e8d52ad5a5",
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"type\": \"BVN\",\r\n  \"number\": \"123456789\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://gainpay-backend.test/api/tiers/tier_one",
+									"protocol": "http",
+									"host": [
+										"gainpay-backend",
+										"test"
+									],
+									"path": [
+										"api",
+										"tiers",
+										"tier_one"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.25.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.27"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Jun 2025 08:45:41 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"statusCode\": 200,\n    \"data\": {\n        \"_id\": \"684007b29eeca8cdae4d126a\",\n        \"clientId\": \"67ef8718451bcf002423ebaa\",\n        \"type\": \"BVN\",\n        \"amount\": 50,\n        \"status\": \"SUCCESS\",\n        \"debitAccountNumber\": \"0104426517\",\n        \"vat\": 0,\n        \"stampDuty\": 0,\n        \"isDeleted\": false,\n        \"otpVerified\": true,\n        \"otpResendCount\": 0,\n        \"createdAt\": \"2025-06-04T08:45:38.486Z\",\n        \"updatedAt\": \"2025-06-04T08:45:40.730Z\",\n        \"__v\": 0,\n        \"debitMessage\": \"Approved or completed successfully\",\n        \"debitResponsCode\": 200,\n        \"debitSessionId\": \"090286250604084538645853754800\",\n        \"otpId\": \"684007b49eeca8cdae4d126e\",\n        \"providerResponse\": \"{\\\"bvn\\\":\\\"123456789\\\",\\\"fullName\\\":\\\"John Doe\\\",\\\"firstName\\\":\\\"John\\\",\\\"middleName\\\":\\\"\\\",\\\"lastName\\\":\\\"Doe\\\",\\\"dateOfBirth\\\":\\\"14-02-1920\\\",\\\"phoneNumber1\\\":\\\"0812345678\\\",\\\"phoneNumber2\\\":\\\"0812345678\\\",\\\"gender\\\":\\\"Male\\\",\\\"enrollmentBank\\\":\\\"enrollmentBank\\\",\\\"enrollmentBranch\\\":\\\"enrollmentBranch\\\",\\\"email\\\":\\\"email\\\",\\\"lgaOfOrigin\\\":\\\"lgaOfOrigin\\\",\\\"lgaOfResidence\\\":\\\"lgaOfResidence\\\",\\\"maritalStatus\\\":\\\"Single\\\",\\\"nin\\\":\\\"\\\",\\\"nationality\\\":\\\"\\\",\\\"residentialAddress\\\":\\\"\\\",\\\"stateOfOrigin\\\":\\\"stateOfOrigin\\\",\\\"stateOfResidence\\\":\\\"\\\",\\\"title\\\":\\\"\\\",\\\"watchListed\\\":\\\"\\\",\\\"levelOfAccount\\\":\\\"\\\",\\\"registrationDate\\\":null,\\\"imageBase64\\\":\\\"/9j/4AAQSkZJRgABAgAAAQ\\\"}\"\n    },\n    \"message\": \"Record fetched successfully\"\n}"
+						},
+						{
+							"id": "14679973-3227afc8-4125-40e3-b7f4-feb3d6c6895e",
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"type\": \"NIN\",\r\n  \"number\": \"123456789\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://gainpay-backend.test/api/tiers/tier_one",
+									"protocol": "http",
+									"host": [
+										"gainpay-backend",
+										"test"
+									],
+									"path": [
+										"api",
+										"tiers",
+										"tier_one"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.25.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.27"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Jun 2025 09:10:32 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"statusCode\": 200,\n    \"data\": {\n        \"_id\": \"68400d859eeca8cdae4d1287\",\n        \"clientId\": \"67ef8718451bcf002423ebaa\",\n        \"type\": \"NIN\",\n        \"amount\": 50,\n        \"status\": \"SUCCESS\",\n        \"debitAccountNumber\": \"0104426517\",\n        \"vat\": 0,\n        \"stampDuty\": 0,\n        \"isDeleted\": false,\n        \"otpVerified\": true,\n        \"otpResendCount\": 0,\n        \"createdAt\": \"2025-06-04T09:10:29.812Z\",\n        \"updatedAt\": \"2025-06-04T09:10:31.857Z\",\n        \"__v\": 0,\n        \"debitMessage\": \"Approved or completed successfully\",\n        \"debitResponsCode\": 200,\n        \"debitSessionId\": \"090286250604091030487589937708\",\n        \"otpId\": \"68400d879eeca8cdae4d128b\",\n        \"providerResponse\": \"{\\\"firstName\\\":\\\"John\\\",\\\"lastName\\\":\\\"Doe\\\",\\\"dob\\\":\\\"14-02-1990\\\",\\\"phone\\\":\\\"08112345678\\\",\\\"gender\\\":\\\"m\\\",\\\"stateOfOrigin\\\":\\\"stateOfOrigin\\\",\\\"lgaOfOrigin\\\":\\\"lgaOfOrigin\\\",\\\"photo\\\":\\\"/9j/4AAQSkZJRgABAgAAAQ\\\"}\"\n    },\n    \"message\": \"Record fetched successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "verify tier one",
+					"id": "14679973-70056830-90fc-462b-91ae-817386728ff7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"identityId\": \"688a446f3dd571c5cc8eb3c2\",\r\n  \"identityNumber\": \"123452749\",\r\n  \"type\": \"NIN\",\r\n  \"otp\": \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8085/api/tiers/verify_tier_one",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"tiers",
+								"verify_tier_one"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "14679973-81f6e611-5695-4eaf-9efe-a62260ba5c65",
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"identityId\": \"684007b29eeca8cdae4d126a\",\r\n  \"type\": \"BVN\",\r\n  \"otp\": \"12345\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://gainpay-backend.test/api/tiers/verify_tier_one",
+									"protocol": "http",
+									"host": [
+										"gainpay-backend",
+										"test"
+									],
+									"path": [
+										"api",
+										"tiers",
+										"verify_tier_one"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.25.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.27"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Jun 2025 08:50:03 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"record fetched successfully\",\n    \"data\": {\n        \"_id\": \"684007b29eeca8cdae4d126a\",\n        \"clientId\": \"67ef8718451bcf002423ebaa\",\n        \"type\": \"BVN\",\n        \"amount\": 50,\n        \"status\": \"SUCCESS\",\n        \"debitAccountNumber\": \"0104426517\",\n        \"vat\": 0,\n        \"stampDuty\": 0,\n        \"isDeleted\": false,\n        \"otpVerified\": true,\n        \"otpResendCount\": 0,\n        \"createdAt\": \"2025-06-04T08:45:38.486Z\",\n        \"updatedAt\": \"2025-06-04T08:45:40.730Z\",\n        \"__v\": 0,\n        \"debitMessage\": \"Approved or completed successfully\",\n        \"debitResponsCode\": 200,\n        \"debitSessionId\": \"090286250604084538645853754800\",\n        \"otpId\": \"684007b49eeca8cdae4d126e\",\n        \"providerResponse\": {\n            \"bvn\": \"123456789\",\n            \"fullName\": \"John Doe\",\n            \"firstName\": \"John\",\n            \"middleName\": \"\",\n            \"lastName\": \"Doe\",\n            \"dateOfBirth\": \"14-02-1920\",\n            \"phoneNumber1\": \"0812345678\",\n            \"phoneNumber2\": \"0812345678\",\n            \"gender\": \"Male\",\n            \"enrollmentBank\": \"enrollmentBank\",\n            \"enrollmentBranch\": \"enrollmentBranch\",\n            \"email\": \"email\",\n            \"lgaOfOrigin\": \"lgaOfOrigin\",\n            \"lgaOfResidence\": \"lgaOfResidence\",\n            \"maritalStatus\": \"Single\",\n            \"nin\": \"\",\n            \"nationality\": \"\",\n            \"residentialAddress\": \"\",\n            \"stateOfOrigin\": \"stateOfOrigin\",\n            \"stateOfResidence\": \"\",\n            \"title\": \"\",\n            \"watchListed\": \"\",\n            \"levelOfAccount\": \"\",\n            \"registrationDate\": null,\n            \"imageBase64\": \"/9j/4AAQSkZJRgABAgAAAQ\"\n        }\n    }\n}"
+						},
+						{
+							"id": "14679973-2c87ef00-2f8a-46a9-a5ec-5d3c5dcf9bef",
+							"name": "verify tier one",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"identityId\": \"685e33a1f4708e12a856219a\",\r\n  \"identityNumber\": \"123456789\",\r\n  \"type\": \"NIN\",\r\n  \"otp\": \"12345\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://giftcardkiosk.online/api/tiers/verify_tier_one",
+									"protocol": "https",
+									"host": [
+										"giftcardkiosk",
+										"online"
+									],
+									"path": [
+										"api",
+										"tiers",
+										"verify_tier_one"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 27 Jun 2025 06:32:32 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Vary",
+									"value": "Authorization,Accept-Encoding"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Content-Length",
+									"value": "732"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"headers\": {},\n    \"original\": {\n        \"statusCode\": 200,\n        \"message\": \"Account Created Successfully.\",\n        \"data\": {\n            \"canDebit\": true,\n            \"canCredit\": true,\n            \"_id\": \"685e3aff4bfd440024aeda5c\",\n            \"client\": \"67ef8718451bcf002423ebaa\",\n            \"accountProduct\": \"612cbd5a5e7f33693c591a8f\",\n            \"accountNumber\": \"8029925603\",\n            \"accountName\": \"ROMES / JOHN DOE\",\n            \"accountType\": \"Current\",\n            \"currencyCode\": \"NGN\",\n            \"bvn\": \"\",\n            \"identityId\": \"685e33a1f4708e12a856219a\",\n            \"accountBalance\": 0,\n            \"bookBalance\": 0,\n            \"interestBalance\": 0,\n            \"withHoldingTaxBalance\": 0,\n            \"status\": \"Active\",\n            \"isDefault\": false,\n            \"nominalAnnualInterestRate\": 0,\n            \"interestCompoundingPeriod\": \"Daily\",\n            \"interestPostingPeriod\": \"Monthly\",\n            \"interestCalculationType\": \"DailyBalance\",\n            \"interestCalculationDaysInYearType\": \"365\",\n            \"minRequiredOpeningBalance\": 0,\n            \"lockinPeriodFrequency\": 0,\n            \"lockinPeriodFrequencyType\": \"Days\",\n            \"allowOverdraft\": false,\n            \"overdraftLimit\": 0,\n            \"chargeWithHoldingTax\": true,\n            \"chargeValueAddedTax\": true,\n            \"chargeStampDuty\": true,\n            \"notificationSettings\": {\n                \"smsNotification\": false,\n                \"emailNotification\": false,\n                \"emailMonthlyStatement\": false,\n                \"smsMonthlyStatement\": false\n            },\n            \"isSubAccount\": true,\n            \"subAccountDetails\": {\n                \"firstName\": \"John\",\n                \"lastName\": \"Doe\",\n                \"emailAddress\": \"unq7mpe1ja@dygovil.com\",\n                \"bvn\": \"\",\n                \"nin\": \"\",\n                \"accountType\": \"Individual\"\n            },\n            \"externalReference\": \"3d3a53e3-95ce-4c9b-b716-906b7fba3865\",\n            \"isDeleted\": false,\n            \"createdAt\": \"2025-06-27T06:32:31.285Z\",\n            \"updatedAt\": \"2025-06-27T06:32:31.285Z\",\n            \"__v\": 0,\n            \"cbaAccountId\": \"25805\"\n        }\n    },\n    \"exception\": null\n}"
+						},
+						{
+							"id": "14679973-f39c1482-eee0-4bee-a29e-6394a192eb17",
+							"name": "User account already created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"identityId\": \"685e33a1f4708e12a856219a\",\r\n  \"identityNumber\": \"123456789\",\r\n  \"type\": \"NIN\",\r\n  \"otp\": \"12345\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://giftcardkiosk.online/api/tiers/verify_tier_one",
+									"protocol": "https",
+									"host": [
+										"giftcardkiosk",
+										"online"
+									],
+									"path": [
+										"api",
+										"tiers",
+										"verify_tier_one"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 27 Jun 2025 06:54:10 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Vary",
+									"value": "Authorization,Accept-Encoding"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Content-Length",
+									"value": "101"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"headers\": {},\n    \"original\": {\n        \"message\": \"User already has an NGN account\"\n    },\n    \"exception\": null\n}"
+						}
+					]
+				}
+			],
+			"id": "14679973-da6869b8-0918-498c-a285-00e41f31e744",
+			"description": "### **Tier 0 – Basic Registration**\n\n> Entry-level access to the app. \n  \n\n#### ✅ Requirements:\n\n- Name\n    \n- Phone number\n    \n- Email address (optional)\n    \n- Password (or social login)\n    \n\n#### 🔒 Limitations:\n\n- **No transactions allowed**\n    \n- **No wallet access**\n    \n- Only access to **basic features** like profile setup or onboarding\n    \n- Must upgrade to Tier 1 to perform any financial activities\n    \n\n---\n\n### **Tier 1 – NIN Verification**\n\n> Enables basic transactions within Nigeria. \n  \n\n#### ✅ Requirements:\n\n- **NIN** (National Identification Number)\n    \n- Basic profile info (name, phone, email)\n    \n\n#### 🔓 Access:\n\n- **NGN (local currency) transfers only**\n    \n- **Limited transaction and balance thresholds**\n    \n\n#### 🔒 Limitations:\n\n- No access to **foreign currency wallets (e.g., USD)**\n    \n- No **card issuance**\n    \n- No international features\n    \n\n### **Tier 2 – Full Verification**\n\n> Designed for users who need full access to financial services, including USD wallets and international transactions. \n  \n\n#### ✅ Requirements:\n\n- **International Passport**\n    \n- **BVN** (Bank Verification Number)\n    \n- **Complete KYC profile**:\n    \n    - Full name, date of birth, valid phone, and email\n        \n    - Passport number and issuing country\n        \n    - Address (line1, city, state, country, postal code)\n        \n    - Document uploads:\n        \n        - Passport scan\n            \n        - Bank Statment\n            \n    - Background/KYC info\n        \n\n#### 🔓 Benefits:\n\n- **Access to USD wallets and international banking features**\n    \n- **Higher transaction and balance limits**\n    \n- Eligible for **virtual USD card issuance**\n    \n- Enables both **local and foreign currency transfers**\n    \n- Stronger identity verification = fewer restrictions\n    \n\nEndFragment"
 		}
 	],
 	"auth": {
